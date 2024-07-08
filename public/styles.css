@@ -5,6 +5,8 @@
   padding: 10px;
   font-family: monospace;
   overflow-y: auto;
+  background-color: #222; /* Dark background for a terminal look */
+  color: #eee;           /* Light text color for contrast */
 }
 
 .output {
@@ -17,4 +19,6 @@
   padding: 5px;
   border: 1px solid #ccc;
   font-family: monospace;
+  background-color: #333; /* Darker background for the input */
+  color: #eee;             /* Light text color for contrast */
 }
