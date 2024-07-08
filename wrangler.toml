@@ -1,15 +1,16 @@
 name = "astraea-cli"
-account_id = "your_cloudflare_account_id" 
-route = "your-domain.com/*"  # Or a subdomain like cli.your-domain.com
+account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID" 
+route = "astraea-cli.com/*"  # Or a subdomain like cli.your-domain.com
 
 [build]
   command = "npm run build" 
 
 [[r2_buckets]]
   binding = "ASTRAEA_DATA" # Use the same name as in your code
-  bucket_name = "astraea-cli-data" 
+  bucket_name = "astraea-cli-data" # Replace with your actual bucket name
 
 [vars]
   OPENAI_API_KEY = "your_openai_api_key" # This is just an example, use secrets!
+  GITHUB_ACCESS_TOKEN = "your_github_access_token" # Use secrets!
 
 # ... other configurations ...
