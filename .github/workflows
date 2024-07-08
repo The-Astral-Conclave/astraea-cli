@@ -1,0 +1,24 @@
+name: Deploy Astraea CLI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - name: Install Dependencies
+      run: npm ci
+    - name: Build Project
+      run: npm run build
+    - uses: cloudflare/workers-action@v1
+      with:
+        account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        wrangler_config: wrangler.toml
