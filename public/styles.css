@@ -1,0 +1,20 @@
+.terminal {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: monospace;
+  overflow-y: auto;
+}
+
+.output {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.command {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  font-family: monospace;
+}
